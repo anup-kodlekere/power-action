@@ -5,7 +5,7 @@ on: [ workflow_dispatch, push ]
 jobs:     
   power_job:
     name: Power Job
-    runs-on: ubuntu-22.04-ppc64le
+    runs-on: self-hosted
     steps:
       - name: Run commands
         run: |
@@ -14,30 +14,3 @@ jobs:
           groups
           id
           whoami
-          
-  
-  # power_job-2:
-  #   name: Power Job-2
-  #   runs-on: ubuntu-22.04-ppc64le
-  #   steps:
-  #     - name: Run commands
-  #       run: |
-  #         uname -a
-  #         arch
-  #         groups
-  #         id
-  #         whoami
-          
-  # power_job-3:
-  #   name: Power Job-3
-  #   runs-on: ubuntu-22.04-ppc64le
-  #   steps:
-  #     - name: Run commands
-  #       run: |
-  #         uname -a
-  #         arch
-  #         groups
-  #         id
-  #         whoami
-          
-  
