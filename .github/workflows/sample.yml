@@ -17,4 +17,5 @@ jobs:
           ls -la
           cat /etc/hosts
           nproc
-          lspci
+          lshw
+          lscpu
