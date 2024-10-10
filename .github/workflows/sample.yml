@@ -4,8 +4,8 @@ on: [ workflow_dispatch, push ]
 
 jobs:     
   power_job:
-    name: Power Job
-    runs-on: self-hosted
+    name: amd Job
+    runs-on: ubuntu-latest
     steps:
       - name: Run commands
         run: |
@@ -16,3 +16,5 @@ jobs:
           whoami
           ls -la
           cat /etc/hosts
+          nproc
+          lspci
