@@ -5,7 +5,7 @@ on: [ workflow_dispatch, push ]
 jobs:     
   power_job:
     name: amd Job
-    runs-on: ubuntu-latest
+    runs-on: [ ubuntu-latest, ubuntu-latest-ppc64le ]
     steps:
       - name: Run commands
         run: |
