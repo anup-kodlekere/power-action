@@ -1,11 +1,27 @@
-name: Sample GHA Workflow for PPC 
+name: Sample GHA Workflow
 
 on: [ workflow_dispatch, push ]
 
 jobs:     
-  power_job:
+  amd_job:
     name: amd Job
-    runs-on: [ ubuntu-latest, ubuntu-latest-ppc64le ]
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - name: Run commands
+        run: |
+          uname -a
+          arch
+          groups
+          id
+          whoami
+          ls -la
+          cat /etc/hosts
+          nproc
+          lshw
+          lscpu
+  ppc_job:
+    name: ppc Job
+    runs-on: [ ubuntu-latest-ppc64le ]
     steps:
       - name: Run commands
         run: |
